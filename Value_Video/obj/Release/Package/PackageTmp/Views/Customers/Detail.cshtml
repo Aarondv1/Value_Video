@@ -1,0 +1,13 @@
+﻿@model Value_Video.Models.Customer
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details for @Model.Name</h2>
+<h3>@Model.MembershipType.Name</h3>
+@if (Model.BirthDate.HasValue)
+{
+    <h3>@Model.BirthDate.Value.ToShortDateString()</h3>
+}
+
